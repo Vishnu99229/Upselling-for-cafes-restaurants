@@ -1,0 +1,41 @@
+Render table baseline
+Generated at: 2026-05-13T11:20:31Z
+
+Tables:
+                     List of relations
+ Schema |           Name           | Type  |     Owner      
+--------+--------------------------+-------+----------------
+ public | admins                   | table | orlena_db_user
+ public | customers                | table | orlena_db_user
+ public | daily_weather            | table | orlena_db_user
+ public | demand_forecasts         | table | orlena_db_user
+ public | ingredients              | table | orlena_db_user
+ public | inventory_alerts         | table | orlena_db_user
+ public | inventory_snapshots      | table | orlena_db_user
+ public | menus                    | table | orlena_db_user
+ public | order_items              | table | orlena_db_user
+ public | orders                   | table | orlena_db_user
+ public | purchase_recommendations | table | orlena_db_user
+ public | recipe_ingredients       | table | orlena_db_user
+ public | restaurants              | table | orlena_db_user
+ public | upsell_events            | table | orlena_db_user
+ public | waste_log                | table | orlena_db_user
+(15 rows)
+
+
+Row counts:
+admins|2
+customers|3
+daily_weather|1095
+demand_forecasts|252
+ingredients|217
+inventory_alerts|0
+inventory_snapshots|78840
+menus|533
+order_items|469718
+orders|127712
+purchase_recommendations|60
+recipe_ingredients|1159
+restaurants|7
+upsell_events|606
+waste_log|28748

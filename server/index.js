@@ -315,12 +315,13 @@ const pool = new Pool({
             // 2. Ensure a test admin exists
             const adminRes = await pool.query("SELECT id FROM admins WHERE email = 'admin@demo.cafe'");
             if (adminRes.rows.length === 0) {
-                const hashedPassword = await bcrypt.hash("admin123", 10);
+                const devPassword = process.env.DEV_ADMIN_PASSWORD || "admin123";
+                const hashedPassword = await bcrypt.hash(devPassword, 10);
                 await pool.query(
                     "INSERT INTO admins (restaurant_id, email, password_hash) VALUES ($1, $2, $3)",
                     [restaurantId, "admin@demo.cafe", hashedPassword]
                 );
-                console.log("🌱 Local Dev: Admin user seeded (admin@demo.cafe / admin123)");
+                console.log(`🌱 Local Dev: Admin user seeded (admin@demo.cafe / ${process.env.DEV_ADMIN_PASSWORD ? "***" : "admin123"})`);
             }
 
             const menuCountRes = await pool.query("SELECT COUNT(*) FROM menus");

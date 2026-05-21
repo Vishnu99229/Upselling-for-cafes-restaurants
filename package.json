@@ -1,7 +1,10 @@
 {
-  "name": "qr-menu-upsell",
+  "name": "orlena-engine",
+  "description": "Orlena - QR-based restaurant ordering system with AI upsell engine",
+  "author": "Vishnu",
+  "license": "MIT",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
